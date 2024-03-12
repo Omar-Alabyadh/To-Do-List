@@ -1,0 +1,192 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+
+}
+
+/* Small */
+@media (min-width: 786px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(120deg, #3ec0b4, #d748f9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+/* h1 Title Start */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+    margin: 1.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* h1 Title End */
+
+.todo-list-container {
+    width: 28.125rem;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgb(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+@media (max-width: 575px) {
+    .todo-list-container {
+        width: 18rem;
+        padding: 12px;
+    }
+}
+
+@media (min-width: 992px) {
+    .todo-list-container {
+        width: 35rem;
+        padding: 12px;
+    }
+}
+
+
+/* List-head Start */
+
+.list-head {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 992px) {
+    .list-head {
+        grid-template-columns: 7fr 1fr;
+    }
+}
+
+.list-head input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+
+.list-head button {
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(8, 6, 133);
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.list-head button.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+/* List-head End */
+
+/* Tasks Container Start */
+
+.tasks {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.task {
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: lightsteelblue;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    word-break: break-word;
+    gap: 1rem;
+}
+
+.task p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #111;
+    letter-spacing: 1px;
+}
+
+.completed {
+    background-color: #ccc;
+}
+
+.completed p {
+    text-decoration: line-through;
+    color: #11111180;
+}
+
+.completed .fa-solid.fa-check {
+    color: slategrey;
+    pointer-events: none;
+}
+
+.task-btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-btns button {
+    color: rgb(8, 6, 133);
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.task-btns .fa-solid.fa-xmark:hover {
+    color: #f00000;
+}
+
+
+/* To-Do Container End */
